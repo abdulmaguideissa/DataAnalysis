@@ -32,9 +32,9 @@ AVG(orders.gloss_amt_usd) AS gloss_usd_avg
     for each sales rep. Your final table should have three columns - the name of the sales rep, 
     the channel, and the number of occurrences. Order your table with the highest number of occurrences first.
 */
-SELECT sales_reps.name AS sales_name,
-web_events.channel AS event_channel,
-COUNT(*) AS occurrences_number
+SELECT sales_reps.name AS "sales_name",
+web_events.channel AS "event_channel",
+COUNT(*) AS "occurrences_number"
     FROM sales_reps
     JOIN accounts
         ON accounts.sales_rep_id = sales_reps.id
@@ -49,9 +49,9 @@ COUNT(*) AS occurrences_number
     name, the channel, and the number of occurrences. Order your table with the highest 
     number of occurrences first.
 */
-SELECT region.name AS region_name,
-web_events.channel AS event_channel,
-COUNT(*) AS occurrences_number
+SELECT region.name AS "region_name",
+web_events.channel AS "event_channel",
+COUNT(*) AS "occurrences_number"
     FROM web_events
     JOIN accounts
         ON accounts.id = web_events.account_id
