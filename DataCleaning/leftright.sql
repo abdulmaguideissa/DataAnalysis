@@ -47,11 +47,11 @@ SELECT SUM(Numb) nums, SUM(Letter) letters
 */
 WITH vowels AS (
     SELECT name,
-        CASE WHEN LEFT(UPPER(name), 1) IN ('a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U')
+        CASE WHEN LEFT(UPPER(name), 1) IN ('A', 'E', 'I', 'O', 'U')
             THEN 1
         ELSE 0
         END AS Vowel, 
-        CASE WHEN LEFT(UPPER(name), 1) NOT IN ('a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U')
+        CASE WHEN LEFT(UPPER(name), 1) NOT IN ('A', 'E', 'I', 'O', 'U')
             THEN 1
         ELSE 0
         END AS Ord
